@@ -1,38 +1,200 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap');
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+* {
+  font-family: 'Space Grotesk', sans-serif;
+}
+body { margin: 0; }
+form, .submit-container { display:flex;
+  align-self: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 350px;
+}
+
+.submit-container {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.submit-container img {
+  width: 50%;
+  margin: auto;
 }
+@media(max-width: 1410px){
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
+.left {
+  background: linear-gradient(rgb(94, 3, 94), black);
+  width: 100%;
+  height: 300px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.front-image-container {
+  position: absolute;
+  top: 140px;
+  left: 25%;
+  z-index: 2;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.back-image-container {
+  text-align: center;
+  position: absolute;
+  left: 35%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.number {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+}
+
+.holder {
+  position: absolute;
+  bottom: 100px;
+}
+.date {
+  position: absolute;
+  bottom: 100px;
+}
+form {
+  margin-top: 150px;
+}
+}
+
+@media(max-width: 700px){
+  .front-image-container {
+  left: 10%;
+
+}
+.back-image-container {
+  left: 16%;
+}
+}
+@media(min-width: 1410px) {
+.container { 
+  display: flex; 
+  letter-spacing: 3px;
+  height: 100vh;
+  transition: all 0.5s ease-in-out
+}
+label {
+    margin: 10px 0;
+    text-transform: uppercase;
   }
-  to {
-    transform: rotate(360deg);
-  }
+.left {
+  flex: 1;
+  background: url(images/bg-main-desktop.png) no-repeat;
+}
+.right {
+  flex: 2; 
+  display: flex; 
+  flex-direction: column; 
+  align-content: center; 
+  justify-content: center;
+}
+
+.front-image-container { 
+  position: absolute;
+  color: white;
+  left: 150px;
+  top: 200px;
+}
+.front-image-container p { 
+  position: absolute;
+}
+.back-image-container {
+  position: absolute;
+  top: 485px;
+  left: 245px;
+}
+
+}
+.holder {  
+  bottom: 10px;
+  left: 5%;
+  text-transform: uppercase;
+}
+.date {
+  bottom: 10px;
+  right: 35px;
+}
+.cvc {
+  position: absolute;
+  color: #fff;
+  top: 95px;
+  right: 55px;
+}
+.number { 
+  font-size: 28px; 
+  bottom: 30px; 
+  left: 5%;
+}
+#input-month, #input-year{
+  width: 25%;
+}
+#input-cvc {
+  width: 50%;
+  
+}
+#confirm, #continue-btn {
+  cursor: pointer;
+  margin-top: 15px;
+  background: #000;
+  color: #fff;
+  height: 45px;
+  border: none;
+  border-radius: 5px;
+}
+#confirm:hover{
+  background: rgb(31, 30, 30);
+}
+
+#confirm:active{
+  background: rgb(75, 74, 74);
+}
+
+input[type="text"] {
+  padding: 10px; 
+  border-radius: 5px;
+  border: 1px solid gray;}
+
+.inputs, .labels{ 
+  display: flex;
+  gap: 10px;}
+
+.error {
+  margin: 3px;
+  color: red;
+  font-size: 10px;
+  visibility: hidden;
+}
+.hide { display: none;}
+
+.div-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.btn {
+  padding: .25rem;
+  background-image: linear-gradient(to right top, blue, purple, black); 
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border: 1px solid red;
+  margin: 0;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn:hover {
+  background: linear-gradient(to bottom left, blue, purple, black); 
 }

@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+
+.nav {
+    background-image: linear-gradient(to right top, blue, purple, black);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.site-title {
+    font-size: 2rem;
+}
+
+.nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+}
+
+.nav a {
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: .25rem;
+    transition: all ease-in-out 0.5s;
+}
+
+.nav li.active{
+    background-image: linear-gradient(to right top, red, purple, black ,red);
+}
+
+.nav li:hover{
+    background-image: linear-gradient(to left bottom, red, purple, black ,red);
+}
